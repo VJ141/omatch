@@ -5,10 +5,10 @@
 session_start();
 if(!isset($_SESSION['lu_fn']))
 {
-header("location:login.html");
+header("location:index.html");
 }
-$first_name = $_SESSION['u_fn'];
-$last_name = $_SESSION['u_ln'];
+$first_name = $_SESSION['lu_fn'];
+$last_name = $_SESSION['lu_ln'];
 
 ?>
 <!DOCTYPE html>
@@ -59,7 +59,7 @@ $last_name = $_SESSION['u_ln'];
       .row.content {height:auto;} 
     }
 	.w3-myfont {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "verdana", cursive, sans-serif;
 }
 	
   </style>
@@ -68,7 +68,7 @@ $last_name = $_SESSION['u_ln'];
 
 
 <!-- Main Navigation Bar on top-->
-<nav class="navbar navbar-inverse w3-orange w3-myfont" >
+<nav class="navbar navbar-inverse w3-gray w3-myfont" >
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -76,7 +76,7 @@ $last_name = $_SESSION['u_ln'];
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" style="color:white;font-weight:bold;" href="#">CCARD</a>
+      <a class="navbar-brand" style="color:white;font-weight:bold;" href="#">Omatch</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -110,13 +110,13 @@ $last_name = $_SESSION['u_ln'];
  
 <div  class="container-fluid text-center ">    
   <div   class="row content ">
-      <div class="col-sm-2 sidenav w3-green">
+      <div class="col-sm-2 sidenav w3-blue">
 
 
 					
 		<p>			
 			<div class="btn-group" style="width:100%;padding-bottom:5%;">
-				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="width:100%;border-radius:5% 5% 5% 5%" >
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:100%;border-radius:5% 5% 5% 5%" >
 					Recipient Profiles<span class="caret"></span></button>
 					<ul class="dropdown-menu" role="menu">
 						<li><button type="button" class="btn btn-link" style="width:100%;"><a style="text-decoration:none;" onclick="cre_custProfile()">Create Recipient Profile</a></button>
@@ -140,7 +140,7 @@ $last_name = $_SESSION['u_ln'];
 		
 	<p> 
 		<div class="btn-group" style="width:100%;padding-bottom:5%;">
-			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="width:100%;border-radius:5% 5% 5% 5%;">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:100%;border-radius:5% 5% 5% 5%;">
 				Donor Profiles<span class="caret"></span></button>
 				<ul class="dropdown-menu" role="menu">
 					<li><button type="button" class="btn btn-link" style="width:100%;"><a style="text-decoration:none;" onclick="cre_workerProfile()">Create Donor Profile</a></button>
@@ -161,7 +161,7 @@ $last_name = $_SESSION['u_ln'];
 	 </p>
 	 <p> 
 		<div class="btn-group" style="width:100%;padding-bottom:5%;">
-			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="width:100%;border-radius:5% 5% 5% 5%;">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:100%;border-radius:5% 5% 5% 5%;">
 				Find Matches<span class="caret"></span></button>
 				<ul class="dropdown-menu" role="menu">
 					<li><button type="button" class="btn btn-link" style="width:100%;"><a style="text-decoration:none;" onclick="ch_cust_serv_hist()">Child Service History</a></button>
@@ -184,10 +184,9 @@ $last_name = $_SESSION['u_ln'];
 	 
 	 
 		</div>
-    </div>
-	
+    
 <!-- Midddle Result Pane-->
-    <div class="col-sm-8 text-left"> 
+    <div class="col-sm-9 text-left"> 
 	
 	<div class="embed-responsive embed-responsive-4by3">
 		<iframe id="acc_iframe" class="embed-responsive-item" src="recipient_profiles.php">

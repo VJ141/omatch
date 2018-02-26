@@ -5,7 +5,7 @@ $options = array(  "UID" => "sa",  "PWD" => "harmonic26813",  "Database" => "oma
 $conn = sqlsrv_connect($serverName, $options);
 if($conn)
 {
-	echo "hello world";
+	echo "";
 }
 else
 {
