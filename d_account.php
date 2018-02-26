@@ -164,17 +164,10 @@ $last_name = $_SESSION['lu_ln'];
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:100%;border-radius:5% 5% 5% 5%;">
 				Find Matches<span class="caret"></span></button>
 				<ul class="dropdown-menu" role="menu">
-					<li><button type="button" class="btn btn-link" style="width:100%;"><a style="text-decoration:none;" onclick="ch_cust_serv_hist()">Child Service History</a></button>
+					<li><button type="button" class="btn btn-link" style="width:100%;"><a style="text-decoration:none;" onclick="ch_cust_serv_hist()">Find an Organ Match</a></button>
 					   <script>
 							function ch_cust_serv_hist() {
-								document.getElementById("acc_iframe").src = "ch_cust_serv_hist.php";
-							}
-						</script>
-					</li>
-					<li><button type="button" class="btn btn-link" style="width:100%;"><a style="text-decoration:none;" onclick="cust_serv_hist()">Adult Service History</a></button>
-					   <script>
-							function cust_serv_hist() {
-								document.getElementById("acc_iframe").src = "cust_serv_hist.php";
+								document.getElementById("acc_iframe").src = "find_organ_match.php";
 							}
 						</script>
 					</li>
